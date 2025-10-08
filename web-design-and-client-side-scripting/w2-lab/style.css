@@ -1,0 +1,26 @@
+:root {
+    --green-colour: #00FF00;
+    --white-colour: #fff;
+    --orange-colour: #FFA510;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #333;
+}
+
+.green {
+    color: var(--green-colour);
+}
+
+.white {
+    color: var(--white-colour);
+}
+
+.orange {
+    color: var(--orange-colour);
+}
+
+.green-shadow {
+    text-shadow: 1px 1px 1px var(--green-colour);
+}

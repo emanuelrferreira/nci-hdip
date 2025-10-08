@@ -1,0 +1,38 @@
+#main-title {
+    text-align: center;
+    color: navy;
+}
+
+.intro {
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+.comedy {
+    color: green;
+}
+
+.action {
+    color: red;
+    font-weight: bold;
+}
+
+.sci-fi {
+    color: purple;
+    font-style: italic;
+}
+
+.drama {
+    color: darkblue;
+}
+
+.horror {
+    color: darkslategray;
+}
+
+#fav-movie {
+    color: gold;
+    text-decoration: underline;
+    font-weight: bold;
+}

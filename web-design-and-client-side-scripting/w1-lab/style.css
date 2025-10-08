@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+body {
+    font-family: "Geist", sans-serif;
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+ul{
+    list-style-position: inside;
+}

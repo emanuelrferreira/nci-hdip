@@ -1,0 +1,65 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Personagem {
+  - nome : String
+  - nivel : int
+  - pontos_vida : int
+  - poder : int
+  + equipar(arma:Arma) : void
+  + atacar() : int
+  + sofrerDano(dano:int) : void
+  + possuiArma() : boolean
+}
+
+class Guerreiro extends Personagem {
+  - armadura : String
+  + atacar() : int
+}
+
+class Mago extends Personagem {
+  - magia : String
+  + atacar() : int
+  + usarPocao(pocao:String) : void
+}
+
+class Arma {
+  - nome : String
+  - dano_fisico : int
+  - dano_magico : int
+  - tipo : String
+  + causarDano(tipo:String) : int
+}
+
+class Inventario {
+  - capacidade : int
+  + adicionar(item:ItemInventario) : boolean
+  + remover(nome:String) : boolean
+}
+
+class ItemInventario {
+  - nome : String
+  - quantidade : int
+}
+
+class Equipe {
+  - nome : String
+  + adicionarMembro(p:Personagem) : void
+  + removerMembro(p:Personagem) : void
+}
+
+' --- Herança
+Personagem <|-- Guerreiro
+Personagem <|-- Mago
+
+' --- Associação nomeada + multiplicidade
+Personagem "1" -- "0..1" Arma : equipa
+
+' --- Composição
+Personagem "1" *-- "1" Inventario
+Inventario "1" *-- "0..*" ItemInventario
+
+' --- Agregação
+Equipe "1" o-- "1..*" Personagem : membros
+
+@enduml
