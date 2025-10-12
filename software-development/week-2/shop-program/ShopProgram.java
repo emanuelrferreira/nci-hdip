@@ -46,18 +46,3 @@ public class ShopProgram {
 
     }
 }
-
-
-
-
-
-
-
-
-/* ?? Java Shop Program – Brief
- Create a program that asks the user how many of the following four items they want to buy:
-Apples (€0.50 each)
-Bananas (€0.30 each)
-Milk (€1.20 each)
-Bread (€2.00 each)
-The program should then calculate the total cost of the shopping and display it back to the user. */
