@@ -2,6 +2,30 @@
 
 /* general config */
 
+
+
+:root {
+
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --color-background: #faf8f5;
+    --color-foreground: #3d3935;
+    --color-card: #ffffff;
+    --color-card-foreground: #3d3935;
+    --color-primary: #d4a5a5;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #b8d4d4;
+    --color-secondary-foreground: #3d3935;
+    --color-accent: #e8d5c4;
+    --color-accent-foreground: #3d3935;
+    --color-muted: #f0ebe5;
+    --color-muted-foreground: #6b6560;
+    --color-border: #e8dfd5;
+    --color-input: #e8dfd5;
+    --color-ring: #d4a5a5;
+    --font-serif: "Playfair Display", Georgia, serif;
+}
+
+
 * {
     padding: 0;
     margin: 0;
