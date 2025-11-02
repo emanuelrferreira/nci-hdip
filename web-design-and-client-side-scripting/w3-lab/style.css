@@ -1,176 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-/* general config */
 
-
-
-:root {
-
-    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-    --color-background: #faf8f5;
-    --color-foreground: #3d3935;
-    --color-card: #ffffff;
-    --color-card-foreground: #3d3935;
-    --color-primary: #d4a5a5;
-    --color-primary-foreground: #ffffff;
-    --color-secondary: #b8d4d4;
-    --color-secondary-foreground: #3d3935;
-    --color-accent: #e8d5c4;
-    --color-accent-foreground: #3d3935;
-    --color-muted: #f0ebe5;
-    --color-muted-foreground: #6b6560;
-    --color-border: #e8dfd5;
-    --color-input: #e8dfd5;
-    --color-ring: #d4a5a5;
-    --font-serif: "Playfair Display", Georgia, serif;
+:root{
+    --font-sans: "Inter", sans-serif;
+    --color-background: #0f0f12;
+    --color-surface: #181a20;
+    --color-border: #252836;
+    --color-text: #a6adbb;
+    --color-title: #ffffff;
 }
-
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
+body{
     font-family: "Geist", sans-serif;
-    background-color: #0f0f12;
+    background: var(--color-background);
     text-align: justify;
+    color: var(--color-text);
 }
+
 
 .container {
-    max-width:1100px;
-    margin:0 auto;
-    padding:28px;
+    max-width: 1100px;
 }
 
-/* header */
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    padding: 18px 22px;
-    background-color: #181a20; 
-    border: 1px solid #242631;
+.section-box{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 18px;
 }
 
-.id {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    color: #a6adbb;
-}
-
-.small-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    letter-spacing: .5px;
-    border: 1px solid #2a2e3a;
-    border-radius: 20px;
-    width: 68px;
-    height: 80px;
-    background-color: #222;
-    color: #fff;
-}
-
-.about h1 {
+.title { 
+    color: var(--color-title);
     font-size: 1.625rem;
-    color: #fff;
 }
 
-.about p{
-    margin: 8px 0 0;
-    color: #a6adbb;
+.subtitle { 
+    color: var(--color-text);
     font-size: 14px;
 }
 
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:flex-end;
-    gap: 15px;
-}
-
-.contact-item {
-    padding: 8px 12px;
-    background:#12141a;
+.small-logo{
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 80px;
     border-radius: 20px;
-    border: 1px solid #252836;
-    color: #a6adbb;
-}
-
-/* sections */
-
-/* summary */
-
-.light-gray {
-    color: #a6adbb;
-}
-
-section {
-    margin-top: 25px;
-    padding: 18px 22px;
-    background-color: #181a20;
-    border: 1px solid #252836;
-    border-radius: 18px;
-}
-
-section h2 {
+    border: 1px solid #2a2e3a;
+    background: #222;
     color: #fff;
-    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: .5px;
 }
 
-/* section columns */
 
-.card-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+.chip{
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #12141a;
+    border: 1px solid #252836;
+    color: var(--color-text);
+    font-size: 14px;
 }
 
-.card {
-    background-color: #0f0f12;
+
+.section-title{ color: var(--color-title); margin-bottom: 10px; }
+.text-body{ color: var(--color-text); }
+
+
+.plain-card{
+    background: #0f0f12;
     border: 1px solid #242631;
-    padding: 10px 18px;
     border-radius: 18px;
-    color: #fff;
+    padding: 10px 18px;
+    color: var(--color-title);
 }
 
-.card ul {
-    list-style-type: none;
+.item-title {
+    font-size: 1rem;
+}
+
+.item-list {
+    list-style: none;
     margin-top: 10px;
+    padding-left: 0;
 }
 
-.card ul > li {
-    color: #a6adbb;
-    margin-bottom: 5px;
+.item-list li {
+    color: var(--color-text);
+    margin-bottom: 6px;
 }
 
-.card1,
-.card2,
-.card3 {
-    flex: 1;
-}
-
-
-/* skills */
-
-/* tools */
-
-/* languages */
-
-/* media queries */
-
-@media (max-width: 590px) {
+@media (max-width: 590px){
     .small-logo {
-    display: none;
-}
-    .card-columns {
-    flex-direction: column;
-}
+        display: none;
+    }
 }
